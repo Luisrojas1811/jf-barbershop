@@ -13,11 +13,11 @@
 }
 
 :root {
-  --background: #0d0c0a;
-  --foreground: #f3efe7;
-  --primary: #b98b3e;
-  --primary-foreground: #11110f;
-  --border: rgba(241, 238, 230, 0.14);
+  --background: #080808;
+  --foreground: #f1eee6;
+  --primary: #c9a24b;
+  --primary-foreground: #080808;
+  --border: rgba(241, 238, 230, 0.12);
 }
 
 * { box-sizing: border-box; }
@@ -25,3 +25,13 @@ html { scroll-behavior: smooth; background: var(--background); }
 body { margin: 0; background: var(--background); color: var(--foreground); font-family: Arial, Helvetica, sans-serif; }
 button, a { cursor: pointer; }
 ::selection { background: var(--primary); color: var(--primary-foreground); }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
