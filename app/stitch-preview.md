@@ -1,1 +1,0 @@
-Temporary marker for Stitch public UI work.
